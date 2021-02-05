@@ -43,7 +43,6 @@ The above copyright notice and this permission notice shall be included in all c
       <!-- END OF CLOSING TAG OF CONTENT -->
       
       <!-- FOOTER -->
-      <?php $this->load->view('includes/footer.php')?>
 
     </div>
     <!-- END OF MAIN CONTENT -->
@@ -52,9 +51,10 @@ The above copyright notice and this permission notice shall be included in all c
   <!-- END OF WRAPPER -->
 
   <!-- FIXED PLUGINS -->
-  
-  <!-- FIXED PLUGINS -->
   <?php $this->load->view('includes/core_js_files.php')?>
+  
+  <!-- ADDED FUNCTIONS SCRIPTS -->
+  <?php $this->load->view('includes/added_js_functions.php')?>
   
 </body>
 
