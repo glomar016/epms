@@ -66,8 +66,8 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>March 3, 2021</td>
                           <td><span class="badge badge-success">Approved</span></td>
                           <td>
-                            <button class="btn btn-sm btn-warning" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -77,8 +77,19 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>Febuary 26, 2021</td>
                           <td><span class="badge badge-warning">Pending</span></td>
                           <td>
-                            <button class="btn btn-sm btn-warning" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Test Title 3</td>
+                          <td>Test Implementer 3</td>
+                          <td>Test Target Group 3</td>
+                          <td>March 30, 2021</td>
+                          <td><span class="badge badge-info">Ongoing</span></td>
+                          <td>
+                            <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -151,6 +162,70 @@ The above copyright notice and this permission notice shall be included in all c
 
     });
     // End of Creating new project
+    
+    // Edit project
+    $('.btnEditProject').on('click', function(){
+      $('[name="editprojectTitle"').val('Test Title');
+      $('[name="editprojectImplementer"').val('Test Implementer');
+      $('[name="editprojectTargetGroup"').val('Test Target Group');
+      $('[name="editprojectCooperatingAgencies"').val('Test Cooperating Agencies');
+      $('[name="editprojectDateStart"').val('2021-02-06');
+      $('[name="editprojectDateEnd"').val('2021-03-23');
+      $('[name="editprojectImpactStatement"').val('Test Impact Statement');
+      $('#editprojectModal').modal('show');
+    })
+    // End of edit project
+
+    // Update Project
+    $('#editprojectForm').on('submit', function(e){
+      e.preventDefault();
+        $("#btnUpdateProject").attr("disabled", true);
+
+        // Confirmation
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, update it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $("#btnUpdateProject").attr("disabled", false);
+            $('#editprojectModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update your project', 'warning', 'top', 'right');
+          }
+          else{
+            $("#btnUpdateProject").attr("disabled", false);
+          }
+          $("#btnUpdateProject").attr("disabled", false);
+        })
+        // End of Confirmation
+    })
+    // End of update project
+
+    // Delete project
+    $('.btnDeleteProject').on('click', function(){
+      // Confirmation
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'error',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $("#btnUpdateProject").attr("disabled", false);
+            $('#editprojectModal').modal('hide');
+            showNotify('delete', 'You successfully deleted your project', 'danger', 'top', 'right');
+          }
+          else{
+            $("#btnUpdateProject").attr("disabled", false);
+          }
+          $("#btnUpdateProject").attr("disabled", false);
+        })
+        // End of Confirmation
+    })
+    // End of delete project
     
   });
 </script>
