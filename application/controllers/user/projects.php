@@ -22,4 +22,9 @@ class Projects extends CI_Controller {
 	{
 		$this->load->view('user/projects');
 	}
+
+	public function view()
+	{
+		$this->load->view('user/projects_view');
+	}
 }

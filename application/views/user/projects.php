@@ -61,33 +61,42 @@ The above copyright notice and this permission notice shall be included in all c
                       <tbody>
                         <tr>
                           <td>Test Title</td>
-                          <td>Test Implementer</td>
+                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
+                            Test Implementer
+                          </td>
                           <td>Test Target Group</td>
                           <td>March 3, 2021</td>
                           <td><span class="badge badge-success">Approved</span></td>
                           <td>
+                            <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i></button>
                             <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
                             <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
                           <td>Test Title 2</td>
-                          <td>Test Implementer 2</td>
+                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
+                            Test Implementer 2
+                          </td>
                           <td>Test Target Group 2</td>
                           <td>Febuary 26, 2021</td>
                           <td><span class="badge badge-warning">Pending</span></td>
                           <td>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
                             <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
                             <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
                           <td>Test Title 3</td>
-                          <td>Test Implementer 3</td>
+                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
+                            Test Implementer 3
+                          </td>
                           <td>Test Target Group 3</td>
                           <td>March 30, 2021</td>
                           <td><span class="badge badge-info">Ongoing</span></td>
                           <td>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
                             <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
                             <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
@@ -162,6 +171,13 @@ The above copyright notice and this permission notice shall be included in all c
 
     });
     // End of Creating new project
+
+    // View project
+    $('.btnViewProject').on('click', function(){
+        window.location.href = '<?php echo base_url()?>'+'/user/projects/view';
+
+    });
+    // End of View project
     
     // Edit project
     $('.btnEditProject').on('click', function(){
@@ -214,14 +230,8 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnUpdateProject").attr("disabled", false);
-            $('#editprojectModal').modal('hide');
             showNotify('delete', 'You successfully deleted your project', 'danger', 'top', 'right');
           }
-          else{
-            $("#btnUpdateProject").attr("disabled", false);
-          }
-          $("#btnUpdateProject").attr("disabled", false);
         })
         // End of Confirmation
     })
