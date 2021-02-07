@@ -22,7 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/sidebar.php'); ?>
+    <?php $this->load->view('includes/admin/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -42,14 +42,14 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="card-header card-header-info">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Title</h3>
-                      <button data-toggle="modal" data-target="#addProjectDetailsModal" data-dismiss="modal"
-                        type="submit" class="btn btn-primary pull-right"><i class="material-icons"></i>Project Details
+                      <button data-toggle="modal" data-target="#updateProjectStatusModal" data-dismiss="modal"
+                        type="submit" class="btn btn-success pull-right"><i class="material-icons"></i>Update Project Status
                       </button>  
                     </div>
                     <div class="d-flex justify-content-between">
                       <p class="card-category">Sub-Project List</p>
-                      <button data-toggle="modal" data-target="#addsubProjectModal" data-dismiss="modal"
-                            type="submit" class="btn btn-sm btn-success pull-right"><i class="material-icons">add</i>Add Sub-Project
+                      <button data-toggle="modal" data-target="#addProjectDetailsModal" data-dismiss="modal"
+                        type="submit" class="btn btn-primary pull-right"><i class="material-icons"></i>Project Details
                       </button>  
                     </div>
                     
@@ -68,36 +68,33 @@ The above copyright notice and this permission notice shall be included in all c
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
+                          <td><input type="checkbox" value=""></td>
                           <td>Sub-Project Title</td>
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
                           <td> <span class="badge badge-danger">High</span> </td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
+                          <td><input type="checkbox" value=""></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td> <span class="badge badge-warning">Medium</span> </td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
+                          <td><input type="checkbox" value=""></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td> <span class="badge badge-secondary">Low</span> </td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -125,7 +122,7 @@ The above copyright notice and this permission notice shall be included in all c
 
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/user/projects_view_modals.php')?>
+  <?php $this->load->view('modals/admin/projects_view_modals.php')?>
 
   <!-- FIXED PLUGINS -->
   <?php $this->load->view('includes/core_js_files.php')?>
@@ -141,72 +138,16 @@ The above copyright notice and this permission notice shall be included in all c
 <script>
 $(document).ready(function(){    
 
-  // Adding project details
-  $('#addProjectDetailsForm').on('submit', function(e){
-        e.preventDefault();
-        $("#btnAddProjectDetails").attr("disabled", true);
-
-        // Confirmation
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, submit it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            $("#btnAddProjectDetails").attr("disabled", false);
-            $('#addProjectDetailsModal').modal('hide');
-            showNotify('add_alert', 'You successfully updated project details', 'success', 'top', 'right');
-          }
-          else{
-            $("#btnAddProjectDetails").attr("disabled", false);
-          }
-          $("#btnAddProjectDetails").attr("disabled", false);
-        })
-        // End of Confirmation
-
-    });
-  // End of adding project details
-
-  // Adding sub-project
-  $('#addsubProjectForm').on('submit', function(e){
-        e.preventDefault();
-        $("#btnaddSubProject").attr("disabled", true);
-
-        // Confirmation
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, submit it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            $("#btnaddSubProject").attr("disabled", false);
-            $('#addsubProjectModal').modal('hide');
-            showNotify('add_alert', 'You successfully updated project details', 'success', 'top', 'right');
-          }
-          else{
-            $("#btnaddSubProject").attr("disabled", false);
-          }
-          $("#btnaddSubProject").attr("disabled", false);
-        })
-        // End of Confirmation
-
-    });
-  // End of adding sub-project
-
   // View sub project
   $('.btnViewSubProject').on('click', function(){
       $('#editsubProjectModal').modal('show');
     })
   // End of view project
 
-  // Update Sub-Project
-  $('#editsubProjectForm').on('submit', function(e){
+  // Update Sub-Project Status
+  $('#updateProjectStatusForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnupdateSubProject").attr("disabled", true);
+        $("#btnupdateProjectStatus").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -217,36 +158,18 @@ $(document).ready(function(){
           confirmButtonText: 'Yes, update it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnupdateSubProject").attr("disabled", false);
-            $('#editsubProjectModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your sub-project', 'warning', 'top', 'right');
+            $("#btnupdateProjectStatus").attr("disabled", false);
+            $('#updateProjectStatusModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update a project status', 'success', 'top', 'right');
           }
           else{
-            $("#btnupdateSubProject").attr("disabled", false);
+            $("#btnupdateProjectStatus").attr("disabled", false);
           }
-          $("#btnupdateSubProject").attr("disabled", false);
+          $("#btnupdateProjectStatus").attr("disabled", false);
         })
         // End of Confirmation
     })
-  // End of Update Sub-Project 
-
-  // Delete sub-project
-  $('.btnDeleteSubProject').on('click', function(){
-      // Confirmation
-      Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'error',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            showNotify('delete', 'You successfully deleted your sub-project', 'danger', 'top', 'right');
-          }
-        })
-        // End of Confirmation
-    })
-    // End of sub-delete project
+  // End of Update Sub-Project Status
 
 });
 </script>

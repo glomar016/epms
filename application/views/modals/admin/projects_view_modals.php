@@ -296,11 +296,7 @@
                         </div>
                       </div>
                     </div>
-                    <input type="file"  name="">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnAddProjectDetails" type="submit" value="update" class="btn btn-warning">
+                    
             </div>
             </form>
           </div>
@@ -631,7 +627,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="label">Due Date</label>
                           <input  name="" type="date" class="form-control">
@@ -639,9 +635,20 @@
                       </div>
                     </div>
                     <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="label">Status</label>
+                            <select name=""  class="form-control">
+                                                    <option value=""></option>
+                                                    <option value="In Progress">In Progress</option>
+                                                    <option value="Paused">Paused</option>
+                                                    <option value="Done">Done</option>
+                            </select>
+                        </div>
+                      </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="label">Priority Level</label>
+                          <label class="label">Priority</label>
                             <select name=""  class="form-control">
                                                     <option value=""></option>
                                                     <option value="High">High</option>
@@ -700,7 +707,7 @@
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="label">Due Date</label>
                           <input  name="" type="date" class="form-control">
@@ -710,7 +717,7 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="label">Priority</label>
+                          <label class="label">Priority Level</label>
                             <select name=""  class="form-control">
                                                     <option value=""></option>
                                                     <option value="High">High</option>
@@ -735,15 +742,55 @@
                         </div>
                       </div>
                     </div>
-                    <input type="file"  name="">
                 </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <input id="btnupdateSubProject" type="submit" value="update" class="btn btn-warning">
-                    </div>
                 </form>
             </div>
           </div>
         </div>
       </div>
     <!-- END OF EDIT SUBPROJECT -->
+
+    <!-- UPDATE PROJECT STATUS -->
+    <div id="updateProjectStatusModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="updateProjectStatusModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:#4caf50">
+              <p class="card-category" style="color:white">Update Project Status</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="updateProjectStatusForm" name="updateProjectStatusForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="label">Project Status</label>
+                            <select name=""  class="form-control">
+                                                    <option value="In Progress">In Progress</option>
+                                                    <option value="Approved">Approved</option>
+                                                    <option value="Approved w/ SO">Approved w/ SO</option>
+                                                    <option value="Ongoing">Ongoing</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="label">Comment</label>
+                            <textarea  name="" class="form-control" rows="12"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input id="btnupdateProjectStatus" type="submit" value="update" class="btn btn-success">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--END Of UPDATE PROJECT STATUS -->

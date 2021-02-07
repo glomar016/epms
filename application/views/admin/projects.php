@@ -21,7 +21,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/sidebar.php'); ?>
+    <?php $this->load->view('includes/admin/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -41,9 +41,6 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="card-header card-header-info">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Projects</h3>
-                      <button data-toggle="modal" data-target="#newProjectModal" data-dismiss="modal"
-                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> New Project
-                      </button>  
                     </div>
                     <p class="card-category"> List of Project Proposal</p>
                   </div>
@@ -69,8 +66,6 @@ The above copyright notice and this permission notice shall be included in all c
                           <td><span class="badge badge-success">Approved</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -83,8 +78,6 @@ The above copyright notice and this permission notice shall be included in all c
                           <td><span class="badge badge-warning">Pending</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -97,8 +90,19 @@ The above copyright notice and this permission notice shall be included in all c
                           <td><span class="badge badge-info">Ongoing</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-warning btnEditProject"  style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                          </td>
+                        </tr>
+                        </tr>
+                        <tr>
+                          <td>Test Title 4</td>
+                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
+                            Test Implementer 4
+                          </td>
+                          <td>Test Target Group 3</td>
+                          <td>March 30, 2021</td>
+                          <td><span class="badge badge-success">Approved w/ SO</span></td>
+                          <td>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -129,7 +133,7 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/user/projects_modals.php')?>
+  <?php $this->load->view('modals/admin/projects_modals.php')?>
 
 </body>
 
@@ -174,7 +178,7 @@ The above copyright notice and this permission notice shall be included in all c
 
     // View project
     $('.btnViewProject').on('click', function(){
-        window.location.href = '<?php echo base_url()?>'+'user/projects/view';
+        window.location.href = '<?php echo base_url()?>'+'admin/projects/view';
 
     });
     // End of View project
