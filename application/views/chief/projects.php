@@ -21,7 +21,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/admin/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -129,7 +129,7 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/admin/projects_modals.php')?>
+  <?php $this->load->view('modals/chief/projects_modals.php')?>
 
 </body>
 
@@ -192,7 +192,7 @@ The above copyright notice and this permission notice shall be included in all c
 
     // View project
     $('.btnViewProject').on('click', function(){
-        window.location.href = '<?php echo base_url()?>'+'admin/projects/view';
+        window.location.href = '<?php echo base_url()?>'+'chief/projects/view';
 
     });
     // End of View project

@@ -20,11 +20,11 @@ class Projects extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/projects');
+		$this->load->view('chief/projects');
 	}
 
 	public function view()
 	{
-		$this->load->view('admin/projects_view');
+		$this->load->view('chief/projects_view');
 	}
 }

@@ -22,7 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/admin/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">

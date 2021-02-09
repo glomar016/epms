@@ -21,7 +21,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/admin/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -40,9 +40,9 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="card">
                   <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title pull-left">Project Monitoring</h3>
+                      <h3 class="card-title pull-left">Project Proposal</h3>
                     </div>
-                    <p class="card-category">List of Projects</p>
+                    <p class="card-category"> List of Project Proposal</p>
                   </div>
                 <div class="card-body">
                   <div class="table-responsive-data2">
@@ -63,7 +63,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group</td>
                           <td>March 3, 2021</td>
-                          <td><span class="badge badge-success">Approved</span></td>
+                          <td><span class="badge badge-secondary">Pending</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -75,7 +75,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 2</td>
                           <td>Febuary 26, 2021</td>
-                          <td><span class="badge badge-info">Ongoing</span></td>
+                          <td><span class="badge badge-info">In Process</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -87,7 +87,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 3</td>
                           <td>March 30, 2021</td>
-                          <td><span class="badge badge-info">Ongoing</span></td>
+                          <td><span class="badge badge-secondary">Pending</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -120,7 +120,6 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/admin/monitoring_modals.php')?>
 
 </body>
 
@@ -183,7 +182,7 @@ The above copyright notice and this permission notice shall be included in all c
 
     // View project
     $('.btnViewProject').on('click', function(){
-        window.location.href = '<?php echo base_url()?>'+'admin/monitoring/view';
+        window.location.href = '<?php echo base_url()?>'+'chief/proposal/view';
 
     });
     // End of View project

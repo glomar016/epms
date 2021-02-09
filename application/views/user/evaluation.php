@@ -38,7 +38,7 @@ The above copyright notice and this permission notice shall be included in all c
             <!-- PROJECTS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-primary">
+                  <div class="card-header card-header-success">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Evaluation</h3>
                     </div>
@@ -52,6 +52,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <th>Implementer</th>
                           <th>Target Group</th>
                           <th>Date Start</th>
+                          <th>Status</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
@@ -62,9 +63,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group</td>
                           <td>March 3, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
-                            <button class="btn btn-sm btn-success btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                            <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
                         </tr>
                         <tr>
@@ -74,9 +75,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 2</td>
                           <td>Febuary 26, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
-                            <button class="btn btn-sm btn-success btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                            <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
                         </tr>
                         <tr>
@@ -86,9 +87,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 3</td>
                           <td>March 30, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
-                            <button class="btn btn-sm btn-success btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                            <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
                         </tr>
                       </tbody>

@@ -22,7 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -509,7 +509,7 @@ The above copyright notice and this permission notice shall be included in all c
                       <div class="col-md-12">
                         <div class="form-group">
                             <label class="label">Evaluation</label>
-                            <textarea disabled  name="" class="form-control" rows="12"></textarea>
+                            <textarea  name="" class="form-control" rows="12"></textarea>
                         </div>
                       </div>
                     </div>
@@ -524,6 +524,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input id="btnAddSubProjectEvaluation" type="submit" value="submit" class="btn btn-warning">
                     </div>
                 </form>
             </div>
@@ -548,7 +549,7 @@ The above copyright notice and this permission notice shall be included in all c
                       <div class="col-md-12">
                         <div class="form-group">
                             <label class="label">Impact Statement</label>
-                            <textarea disabled name="" class="form-control" rows="12"></textarea>
+                            <textarea name="" class="form-control" rows="12"></textarea>
                         </div>
                       </div>
                     </div>
@@ -563,6 +564,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input id="btnAddProjectEvaluation" type="submit" value="submit" class="btn btn-warning">
                     </div>
                 </form>
             </div>
@@ -654,11 +656,6 @@ $(document).ready(function(){
     });
   // End of adding sub-project
 
-  // View project evaluation
-  $('.btnViewProjectEvaluation').on('click', function(){
-      $('#viewProjectEvaluationModal').modal('show');
-    })
-  // End of view project evaluation
 
   // View sub project evaluation
   $('.btnViewSubProjectEvaluation').on('click', function(){
@@ -672,10 +669,10 @@ $(document).ready(function(){
     })
   // End of view project
 
-  // Update Sub-Project
-  $('#editsubProjectForm').on('submit', function(e){
+  // Add Project Evaluation
+  $('#viewProjectEvaluationForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnupdateSubProject").attr("disabled", true);
+        $("#btnAddProjectEvaluation").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -686,14 +683,41 @@ $(document).ready(function(){
           confirmButtonText: 'Yes, update it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnupdateSubProject").attr("disabled", false);
-            $('#editsubProjectModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your sub-project', 'warning', 'top', 'right');
+            $("#btnAddProjectEvaluation").attr("disabled", false);
+            $('#viewProjectEvaluationModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully added an evaluation on project ', 'warning', 'top', 'right');
           }
           else{
-            $("#btnupdateSubProject").attr("disabled", false);
+            $("#btnAddProjectEvaluation").attr("disabled", false);
           }
-          $("#btnupdateSubProject").attr("disabled", false);
+          $("#btnAddProjectEvaluation").attr("disabled", false);
+        })
+        // End of Confirmation
+    })
+  // End of Update Sub-Project 
+
+  // Update Sub-Project
+  $('#viewsubProjectEvaluationForm').on('submit', function(e){
+      e.preventDefault();
+        $("#btnAddSubProjectEvaluation").attr("disabled", true);
+
+        // Confirmation
+        Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonText: 'Yes, update it!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $("#btnAddSubProjectEvaluation").attr("disabled", false);
+            $('#viewsubProjectEvaluationModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully added an evaluation on sub-project ', 'warning', 'top', 'right');
+          }
+          else{
+            $("#btnAddSubProjectEvaluation").attr("disabled", false);
+          }
+          $("#btnAddSubProjectEvaluation").attr("disabled", false);
         })
         // End of Confirmation
     })

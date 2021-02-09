@@ -22,7 +22,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -37,17 +37,17 @@ The above copyright notice and this permission notice shall be included in all c
             <!-- END OF OPENING TAG OF CONTENT -->
 
               <!-- PROJECTS DATA TABLE -->
-              <div class="col-md-12">
+            <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-success">
+                  <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Title</h3>
                       <button data-toggle="modal" data-target="#viewProjectDetailsModal" data-dismiss="modal"
                         type="submit" class="btn btn-md btn-info pull-right"><i class="material-icons"></i>Project Details
                       </button>  
                     </div>
-                      <button data-toggle="modal" data-target="#viewProjectEvaluationModal" data-dismiss="modal"
-                        type="submit" class="btn btn-md btn-warning pull-right"><i class="material-icons"></i>Impact Statement
+                    <button data-toggle="modal" data-target="#editProjectStatusModal" data-dismiss="modal"
+                        type="submit" class="btn btn-md btn-warning pull-right"><i class="material-icons"></i>Update Project Status
                       </button>  
                     <div class="card-header" style="padding: 0.0rem 1.25rem">
                       <h6 class="card-category">Implementer: </h6>
@@ -66,7 +66,6 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="table-responsive-data2">
                     <table id="projectsTableView" class="table table-striped">
                       <thead class=" text-sucess">
-                          <th></th>
                           <th>Title</th>
                           <th>Status</th>
                           <th>Due Date</th>
@@ -74,33 +73,30 @@ The above copyright notice and this permission notice shall be included in all c
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="checkbox" checked value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
                           <td>
                             <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
-                            <button class="btn btn-sm btn-warning btnViewSubProjectEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
+                            <button class="btn btn-sm btn-primary btnAddSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i> Remarks</button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
-                            <button class="btn btn-sm btn-warning btnViewSubProjectEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
+                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                          <button class="btn btn-sm btn-primary btnAddSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i> Remarks</button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
-                            <button class="btn btn-sm btn-warning btnViewSubProjectEvaluation" style="padding:5px"><i class="material-icons">edit</i> Evaluation</button>
+                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                          <button class="btn btn-sm btn-primary btnAddSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i> Remarks</button>
                           </td>
                         </tr>
                       </tbody>
@@ -128,7 +124,8 @@ The above copyright notice and this permission notice shall be included in all c
 
   
   <!-- MODALS -->
-  <div id="viewProjectDetailsModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewProjectDetailsModalLabel" aria-hidden="true">
+    <!-- VIEW PROJECT DETAILS  -->
+    <div id="viewProjectDetailsModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewProjectDetailsModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#00bcd4">
@@ -437,6 +434,58 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     <!-- END OF VIEW PROJECT DETAILS -->
 
+    <!-- EDIT PROJECT STATUS -->
+    <div id="editProjectStatusModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editProjectStatusModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:#ff9800">
+              <p class="card-category" style="color:white">Project Title Status</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="editProjectStatusForm" name="editProjectStatusForm">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="label">Project Status</label>
+                            <select id="projectStatus" class="form-control">
+                                <option selected value=""></option>
+                                <option value="Pending">Pending</option>
+                                <option value="In Process">In Process</option>
+                                <option value="Approved">Approved</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div id="projectStatusRemarks" class="form-group">
+                            
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label">Files Attached</label>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="file"  name=""> -->
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input id="btnUpdateStatus" type="submit" value="submit" class="btn btn-warning">
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- END OF EDIT PROJECT STATUS -->
+
     <!-- VIEW SUB PROJECT  -->
     <div id="viewsubProjectModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewsubProjectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
@@ -493,23 +542,23 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     <!-- END OF view SUBPROJECT -->
 
-    <!-- VIEW SUB PROJECT EVALUATION -->
-    <div id="viewsubProjectEvaluationModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewsubProjectEvaluationModalLabel" aria-hidden="true">
+    <!-- ADD SUB PROJECT REMARKS -->
+    <div id="addSubProjectRemarksModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="addSubProjectRemarksModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header" style="background-color:#ff9800">
-              <p class="card-category" style="color:white">Sub-Project Title Evaluation</p>
+            <div class="modal-header" style="background-color:#9c27b0">
+              <p class="card-category" style="color:white">Sub-Project Remarks</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-                <form id="viewsubProjectEvaluationForm" name="viewsubProjectEvaluationForm">
+                <form id="addSubProjectRemarksForm" name="addSubProjectRemarksForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                            <label class="label">Evaluation</label>
-                            <textarea disabled  name="" class="form-control" rows="12"></textarea>
+                            <label class="label">Sub-Project Remarks</label>
+                            <textarea name="" class="form-control" rows="8"></textarea>
                         </div>
                       </div>
                     </div>
@@ -520,56 +569,18 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                       </div>
                     </div>
-                    <input type="file"  name=""> -->
+                    <input disabled type="file"  name=""> -->
                 </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input id="btnAddSubProjectRemarks" type="submit" value="submit" class="btn btn-primary">
                     </div>
                 </form>
             </div>
           </div>
         </div>
       </div>
-    <!-- VIEW OF ADD SUBPROJECT EVALUATION  -->
-
-    <!-- VIEW PROJECT EVALUATION -->
-    <div id="viewProjectEvaluationModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewProjectEvaluationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header" style="background-color:#ff9800">
-              <p class="card-category" style="color:white">Project Title Evaluation</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form id="viewProjectEvaluationForm" name="viewProjectEvaluationForm">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                            <label class="label">Impact Statement</label>
-                            <textarea disabled name="" class="form-control" rows="12"></textarea>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="label">Files Attached</label>
-                        </div>
-                      </div>
-                    </div>
-                    <input type="file"  name=""> -->
-                </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    <!-- END OF EDIT PROJECT EVALUATION  -->
+    <!-- END OF view SUBPROJECT REMARKS -->
 
   <!-- FIXED PLUGINS -->
   <?php $this->load->view('includes/core_js_files.php')?>
@@ -598,84 +609,40 @@ $(document).ready(function(){
 
     loadtable()
 
-  // Adding project details
-  $('#addProjectDetailsForm').on('submit', function(e){
-        e.preventDefault();
-        $("#btnAddProjectDetails").attr("disabled", true);
 
-        // Confirmation
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, submit it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            $("#btnAddProjectDetails").attr("disabled", false);
-            $('#addProjectDetailsModal').modal('hide');
-            showNotify('add_alert', 'You successfully updated project details', 'success', 'top', 'right');
-          }
-          else{
-            $("#btnAddProjectDetails").attr("disabled", false);
-          }
-          $("#btnAddProjectDetails").attr("disabled", false);
-        })
-        // End of Confirmation
+    // Project Status Form Change
+  $('#projectStatus').on('change', function(){
+    var selected_option = $('#projectStatus option:selected').val();
+    console.log(selected_option)
+    if(selected_option == "Approved"){
+      var projectStatusRemarks = `<label class="label">Presentation Schedule</label>
+                                  <input name="" type="datetime-local" class="form-control">`
+      $('#projectStatusRemarks').html(projectStatusRemarks)
+    }
+    else if(selected_option == "Pending" || selected_option == "In Process"){
+      var projectStatusRemarks = `<label class="label">Remarks</label>
+                              <textarea  name="" class="form-control" rows="8"></textarea>`
+      $('#projectStatusRemarks').html(projectStatusRemarks)
+    }
+  })
 
-    });
-  // End of adding project details
 
-  // Adding sub-project
-  $('#addsubProjectForm').on('submit', function(e){
-        e.preventDefault();
-        $("#btnaddSubProject").attr("disabled", true);
+  // View sub project
+  $('.btnAddSubProjectRemarks').on('click', function(){
+      $('#addSubProjectRemarksModal').modal('show');
+  })
+  // End of view project
 
-        // Confirmation
-        Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'warning',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, submit it!'
-        }).then((result) => {
-          if (result.isConfirmed) {
-            $("#btnaddSubProject").attr("disabled", false);
-            $('#addsubProjectModal').modal('hide');
-            showNotify('add_alert', 'You successfully updated project details', 'success', 'top', 'right');
-          }
-          else{
-            $("#btnaddSubProject").attr("disabled", false);
-          }
-          $("#btnaddSubProject").attr("disabled", false);
-        })
-        // End of Confirmation
-
-    });
-  // End of adding sub-project
-
-  // View project evaluation
-  $('.btnViewProjectEvaluation').on('click', function(){
-      $('#viewProjectEvaluationModal').modal('show');
-    })
-  // End of view project evaluation
-
-  // View sub project evaluation
-  $('.btnViewSubProjectEvaluation').on('click', function(){
-      $('#viewsubProjectEvaluationModal').modal('show');
-    })
-  // End of view project evaluation
-  
   // View sub project
   $('.btnViewSubProject').on('click', function(){
       $('#viewsubProjectModal').modal('show');
-    })
+  })
   // End of view project
 
-  // Update Sub-Project
-  $('#editsubProjectForm').on('submit', function(e){
+  // Update Project Status
+  $('#editProjectStatusForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnupdateSubProject").attr("disabled", true);
+        $("#btnUpdateStatus").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -687,35 +654,45 @@ $(document).ready(function(){
         }).then((result) => {
           if (result.isConfirmed) {
             $("#btnupdateSubProject").attr("disabled", false);
-            $('#editsubProjectModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your sub-project', 'warning', 'top', 'right');
+            $('#editProjectStatusModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update your project status', 'warning', 'top', 'right');
           }
           else{
-            $("#btnupdateSubProject").attr("disabled", false);
+            $("#btnUpdateStatus").attr("disabled", false);
           }
-          $("#btnupdateSubProject").attr("disabled", false);
+          $("#btnUpdateStatus").attr("disabled", false);
         })
         // End of Confirmation
     })
-  // End of Update Sub-Project 
+  // End of Update Project Status 
 
-  // Delete sub-project
-  $('.btnDeleteSubProject').on('click', function(){
-      // Confirmation
-      Swal.fire({
+  // Update Project Status
+  $('#addSubProjectRemarksForm').on('submit', function(e){
+      e.preventDefault();
+        $("#btnUpdateStatus").attr("disabled", true);
+
+        // Confirmation
+        Swal.fire({
           title: 'Are you sure?',
           text: "You won't be able to revert this!",
-          icon: 'error',
+          icon: 'warning',
           showCancelButton: true,
-          confirmButtonText: 'Yes, delete it!'
+          confirmButtonText: 'Yes, submit it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            showNotify('delete', 'You successfully deleted your sub-project', 'danger', 'top', 'right');
+            $("#btnAddSubProjectRemarks").attr("disabled", false);
+            $('#addSubProjectRemarksModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully add a sub-project remarks', 'success', 'top', 'right');
           }
+          else{
+            $("#btnAddSubProjectRemarks").attr("disabled", false);
+          }
+          $("#btnAddSubProjectRemarks").attr("disabled", false);
         })
         // End of Confirmation
     })
-    // End of sub-delete project
+  // End of Update Project Status 
+
 
 });
 </script>

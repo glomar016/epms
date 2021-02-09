@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Proposal extends CI_Controller {
+class Dashboard extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,11 +20,6 @@ class Proposal extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/proposal');
-	}
-
-	public function view()
-	{
-		$this->load->view('admin/proposal_view');
+		$this->load->view('chief/dashboard');
 	}
 }

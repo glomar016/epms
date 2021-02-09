@@ -21,7 +21,7 @@ The above copyright notice and this permission notice shall be included in all c
   <div class="wrapper ">
 
     <!-- SIDEBAR -->
-    <?php $this->load->view('includes/admin/sidebar.php'); ?>
+    <?php $this->load->view('includes/chief/sidebar.php'); ?>
     
     <!-- MAIN CONTENT -->
     <div class="main-panel">
@@ -38,7 +38,7 @@ The above copyright notice and this permission notice shall be included in all c
             <!-- PROJECTS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-primary">
+                  <div class="card-header card-header-success">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Evaluation</h3>
                     </div>
@@ -52,6 +52,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <th>Implementer</th>
                           <th>Target Group</th>
                           <th>Date Start</th>
+                          <th>Status</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
@@ -62,6 +63,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group</td>
                           <td>March 3, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -73,6 +75,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 2</td>
                           <td>Febuary 26, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -84,6 +87,7 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 3</td>
                           <td>March 30, 2021</td>
+                          <td><span class="badge badge-success">Completed</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i> View</button>
                           </td>
@@ -116,7 +120,6 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/admin/evaluation_modals.php')?>
 
 </body>
 
@@ -185,7 +188,7 @@ The above copyright notice and this permission notice shall be included in all c
 
     // View project
     $('.btnViewProject').on('click', function(){
-        window.location.href = '<?php echo base_url()?>'+'admin/evaluation/view';
+        window.location.href = '<?php echo base_url()?>'+'chief/evaluation/view';
     });
     // End of View project
     

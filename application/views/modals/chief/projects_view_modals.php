@@ -778,7 +778,7 @@
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                            <label class="label">Comment</label>
+                            <label class="label">Remarks</label>
                             <textarea  name="" class="form-control" rows="12"></textarea>
                         </div>
                       </div>

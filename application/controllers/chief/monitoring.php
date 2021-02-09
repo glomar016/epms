@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Evaluation extends CI_Controller {
+class Monitoring extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,11 +20,11 @@ class Evaluation extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('admin/evaluation');
+		$this->load->view('chief/monitoring');
 	}
 
 	public function view()
 	{
-		$this->load->view('admin/evaluation_view');
+		$this->load->view('chief/monitoring_view');
 	}
 }

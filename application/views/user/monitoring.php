@@ -38,7 +38,7 @@ The above copyright notice and this permission notice shall be included in all c
             <!-- PROJECTS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-primary">
+                  <div class="card-header card-header-warning">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Monitoring</h3>
                     </div>
@@ -63,11 +63,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group</td>
                           <td>March 3, 2021</td>
-                          <td><span class="badge badge-success">Approved</span></td>
+                          <td><span class="badge badge-warning">Ongoing</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning bttditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
                           </td>
                         </tr>
                         <tr>
@@ -77,11 +75,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 2</td>
                           <td>Febuary 26, 2021</td>
-                          <td><span class="badge badge-info">Ongoing</span></td>
+                          <td><span class="badge badge-success">Approved</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
                           </td>
                         </tr>
                         <tr>
@@ -91,11 +87,9 @@ The above copyright notice and this permission notice shall be included in all c
                           </td>
                           <td>Test Target Group 3</td>
                           <td>March 30, 2021</td>
-                          <td><span class="badge badge-info">Ongoing</span></td>
+                          <td><span class="badge badge-warning">Ongoing</span></td>
                           <td>
                             <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
                           </td>
                         </tr>
                       </tbody>
@@ -126,7 +120,6 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/user/monitoring_modals.php')?>
 
 </body>
 
