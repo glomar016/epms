@@ -39,23 +39,30 @@ The above copyright notice and this permission notice shall be included in all c
               <!-- PROJECTS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
-                  <div class="card-header card-header-info">
+                  <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
                       <h3 class="card-title pull-left">Project Title</h3>
-                      <button data-toggle="modal" data-target="#addProjectDetailsModal" data-dismiss="modal"
-                        type="submit" class="btn btn-primary pull-right"><i class="material-icons"></i>Project Details
+                      <button data-toggle="modal" data-target="#editProjectStatus" data-dismiss="modal"
+                        type="submit" class="btn btn-md btn-success pull-right"><i class="material-icons"></i>Update Project Status
                       </button>  
                     </div>
-                    <div class="d-flex justify-content-between">
-                      <p class="card-category">Sub-Project List</p>
-                      <button data-toggle="modal" data-target="#addsubProjectModal" data-dismiss="modal"
-                            type="submit" class="btn btn-sm btn-success pull-right"><i class="material-icons">add</i>Add Sub-Project
-                      </button>  
+                    <button data-toggle="modal" data-target="#editProjectDetailsModal" data-dismiss="modal"
+                        type="submit" class="btn btn-md btn-info pull-right"><i class="material-icons"></i>Project Details
+                    </button>  
+                    <div class="card-header" style="padding: 0.0rem 1.25rem">
+                      <h6 class="card-category">Implementer: </h6>
+                      <h6 class="card-category">Target Group: </h6>
+                      <h6 class="card-category">Cooperating Agencies: </h6>
+                      <h6 class="card-category">Timeframe: </h6>
                     </div>
-                    
-                    
                   </div>
                 <div class="card-body">
+                  
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                      <h4 class="card-category">List of Sub-Projects</h4>
+                    </div>
+                  </div>
                   <div class="table-responsive-data2">
                     <table id="projectsTableView" class="table table-striped">
                       <thead class=" text-sucess">
@@ -63,7 +70,6 @@ The above copyright notice and this permission notice shall be included in all c
                           <th>Title</th>
                           <th>Status</th>
                           <th>Due Date</th>
-                          <th>Priority</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
@@ -72,10 +78,8 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>Sub-Project Title</td>
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
-                          <td> <span class="badge badge-danger">High</span> </td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
                           </td>
                         </tr>
                         <tr>
@@ -83,10 +87,8 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
-                          <td> <span class="badge badge-warning">Medium</span> </td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
                           </td>
                         </tr>
                         <tr>
@@ -94,10 +96,8 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
-                          <td> <span class="badge badge-secondary">Low</span> </td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
                           </td>
                         </tr>
                       </tbody>
@@ -125,7 +125,7 @@ The above copyright notice and this permission notice shall be included in all c
 
   
   <!-- MODALS -->
-  <?php $this->load->view('modals/admin/projects_view_modals.php')?>
+  <?php $this->load->view('modals/admin/proposal_view_modals.php')?>
 
   <!-- FIXED PLUGINS -->
   <?php $this->load->view('includes/core_js_files.php')?>

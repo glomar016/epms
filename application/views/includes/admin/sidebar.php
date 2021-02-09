@@ -16,12 +16,51 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li <?php if($this->router->fetch_class() == 'projects') {?> class="active has-sub" <?php } ?>>
-            <a class="nav-link" href="<?php echo base_url()?>admin/projects">
-              <i class="material-icons">assignment</i>
-              <p>Projects</p>
+          <li <?php if($this->router->fetch_class() == 'proposal') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/proposal">
+                  <i class="material-icons">post_add</i>
+                  <p>Project Proposal</p>
+            </a>
+          </li>
+          <li <?php if($this->router->fetch_class() == 'monitoring') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/monitoring">
+                  <i class="material-icons">track_changes</i>
+                  <p>Project Monitoring</p>
+            </a>
+          </li>
+          <li <?php if($this->router->fetch_class() == 'evaluation') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/evaluation">
+                <i class="material-icons">manage_search</i>
+                <p>Project Evaluation</p>
+            </a>
+          </li>
+          <li <?php if($this->router->fetch_class() == 'reports') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/reports">
+                <i class="material-icons">report</i>
+                <p>Reports</p>
             </a>
           </li>
         </ul>
       </div>
     </div>
+
+    <!--    <ul style="padding-left:15px; padding-top:10px; list-style-type:none;">
+              <li <?php if($this->router->fetch_class() == 'proposal') {?> class="active has-sub" <?php } ?>>
+                <a class="nav-link" href="<?php echo base_url()?>admin/proposal">
+                  <i class="material-icons">post_add</i>
+                  <p  style="font-size:12px">Project Proposal</p>
+                </a>
+              </li>
+              <li <?php if($this->router->fetch_class() == 'monitoring') {?> class="active has-sub" <?php } ?>>
+                <a class="nav-link" href="<?php echo base_url()?>admin/monitoring">
+                  <i class="material-icons">track_changes</i>
+                  <p  style="font-size:12px">Project Monitoring</p>
+                </a>
+              </li>
+              <li <?php if($this->router->fetch_class() == 'evaluation') {?> class="active has-sub" <?php } ?>>
+                <a class="nav-link" href="<?php echo base_url()?>admin/evaluation">
+                  <i class="material-icons">manage_search</i>
+                  <p style="font-size:12px">Project Evaluation</p>
+                </a>
+              </li>
+            </ul> -->
