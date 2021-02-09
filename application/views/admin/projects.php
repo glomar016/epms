@@ -45,8 +45,8 @@ The above copyright notice and this permission notice shall be included in all c
                     <p class="card-category"> List of Project Proposal</p>
                   </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
+                  <div class="table-responsive-data2">
+                    <table id="projectsTable" class="table table-striped">
                       <thead class=" text-sucess">
                           <th>Title</th>
                           <th>Implementer</th>
@@ -147,6 +147,19 @@ The above copyright notice and this permission notice shall be included in all c
 
 
   $(document).ready(function(){    
+
+    function loadtable(){
+        projectsTable = $('#projectsTable').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          "bAutoWidth": false
+        })
+        
+    }
+
+    loadtable()
 
     // Creating new project
     $('#newProjectForm').on('submit', function(e){

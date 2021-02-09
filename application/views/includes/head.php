@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="<?php echo base_url()?>resources/assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <link href="<?php echo base_url()?>resources/assets/css/jquery.dataTables.min.css" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="<?php echo base_url()?>resources/assets/demo/demo.css" rel="stylesheet" />
 </head>

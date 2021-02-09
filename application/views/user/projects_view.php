@@ -56,8 +56,8 @@ The above copyright notice and this permission notice shall be included in all c
                     
                   </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
+                  <div class="table-responsive-data2">
+                    <table id="projectsTableView" class="table table-striped">
                       <thead class=" text-sucess">
                           <th></th>
                           <th>Title</th>
@@ -68,7 +68,7 @@ The above copyright notice and this permission notice shall be included in all c
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
+                          <td><input type="checkbox" checked value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
@@ -140,6 +140,19 @@ The above copyright notice and this permission notice shall be included in all c
 
 <script>
 $(document).ready(function(){    
+
+  function loadtable(){
+        projectsTableView = $('#projectsTableView').DataTable({
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          "bAutoWidth": false
+        })
+        
+    }
+
+    loadtable()
 
   // Adding project details
   $('#addProjectDetailsForm').on('submit', function(e){

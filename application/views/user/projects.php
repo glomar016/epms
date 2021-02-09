@@ -48,8 +48,8 @@ The above copyright notice and this permission notice shall be included in all c
                     <p class="card-category"> List of Project Proposal</p>
                   </div>
                 <div class="card-body">
-                  <div class="table-responsive">
-                    <table class="table">
+                  <div class="table-responsive-data2">
+                    <table id="projectsTable" class="table table-striped " style="width:100%">
                       <thead class=" text-sucess">
                           <th>Title</th>
                           <th>Implementer</th>
@@ -68,7 +68,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>March 3, 2021</td>
                           <td><span class="badge badge-success">Approved</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewProject" style="padding:5px"><i class="material-icons">visibility</i></button>
+                            <button class="btn btn-sm btn-info btnViewProject"  rel="tooltip" style="padding:5px"><i class="material-icons">visibility</i></button>
                             <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
                             <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
@@ -143,6 +143,24 @@ The above copyright notice and this permission notice shall be included in all c
 
 
   $(document).ready(function(){    
+
+    function loadtable(){
+        projectsTable = $('#projectsTable').DataTable({
+          
+          
+          
+          "bPaginate": true,
+          "bLengthChange": false,
+          "bFilter": true,
+          "bInfo": false,
+          "bAutoWidth": false
+          
+        })
+        
+    }
+
+    loadtable()
+
 
     // Creating new project
     $('#newProjectForm').on('submit', function(e){

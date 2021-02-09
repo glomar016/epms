@@ -10,6 +10,12 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
+          <li <?php if($this->router->fetch_class() == 'dashboard') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/dashboard">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
           <li <?php if($this->router->fetch_class() == 'projects') {?> class="active has-sub" <?php } ?>>
             <a class="nav-link" href="<?php echo base_url()?>admin/projects">
               <i class="material-icons">assignment</i>
