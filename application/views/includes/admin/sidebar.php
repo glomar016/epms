@@ -22,21 +22,21 @@
                   <p>Implementer</p>
             </a>
           </li>
-          <li <?php if($this->router->fetch_class() == 'implementer') {?> class="active has-sub" <?php } ?>>
-            <a class="nav-link" href="<?php echo base_url()?>admin/implementer">
-                  <i class="material-icons">post_add</i>
+          <li <?php if($this->router->fetch_class() == 'campuses') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/campuses">
+                  <i class="material-icons">roofing</i>
                   <p>Campuses</p>
             </a>
           </li>
-          <li <?php if($this->router->fetch_class() == 'implementer') {?> class="active has-sub" <?php } ?>>
-            <a class="nav-link" href="<?php echo base_url()?>admin/implementer">
-                  <i class="material-icons">post_add</i>
+          <li <?php if($this->router->fetch_class() == 'branches') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/branches">
+                  <i class="material-icons">foundation</i>
                   <p>Branches</p>
             </a>
           </li>
-          <li <?php if($this->router->fetch_class() == 'implementer') {?> class="active has-sub" <?php } ?>>
-            <a class="nav-link" href="<?php echo base_url()?>admin/implementer">
-                  <i class="material-icons">post_add</i>
+          <li <?php if($this->router->fetch_class() == 'colleges') {?> class="active has-sub" <?php } ?>>
+            <a class="nav-link" href="<?php echo base_url()?>admin/colleges">
+                  <i class="material-icons">school</i>
                   <p>Colleges</p>
             </a>
           </li>
