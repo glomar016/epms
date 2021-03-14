@@ -79,7 +79,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                            <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -88,7 +88,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -97,7 +97,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i> Details</button>
+                          <button class="btn btn-sm btn-success btnViewSubProject" style="padding:5px"><i class="material-icons">visibility</i></button>
                           </td>
                         </tr>
                       </tbody>

@@ -69,7 +69,6 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="table-responsive-data2">
                     <table id="projectsTableView" class="table table-striped">
                       <thead class=" text-sucess">
-                          <th></th>
                           <th>Title</th>
                           <th>Status</th>
                           <th>Due Date</th>
@@ -77,33 +76,33 @@ The above copyright notice and this permission notice shall be included in all c
                       </thead>
                       <tbody>
                         <tr>
-                          <td><input type="checkbox" checked value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td><span class="badge badge-success">Done</span></td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">upgrade</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-primary btnViewSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">upgrade</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-primary btnViewSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td><input type="checkbox" value="" disabled></td>
                           <td>Sub-Project Title</td>
                           <td> <span class="badge badge-primary">In Progress</span> </td>
                           <td>March 3, 2021</td>
                           <td>
-                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-warning btnViewSubProject" style="padding:5px"><i class="material-icons">upgrade</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteSubProject" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <button class="btn btn-sm btn-primary btnViewSubProjectRemarks" style="padding:5px"><i class="material-icons">edit</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -605,6 +604,45 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     <!-- END OF EDIT SUBPROJECT -->
 
+    <!-- ADD SUB PROJECT REMARKS -->
+    <div id="viewSubProjectRemarksModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="viewSubProjectRemarksModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color:#9c27b0">
+              <p class="card-category" style="color:white">Sub-Project Remarks</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form id="viewSubProjectRemarksForm" name="viewSubProjectRemarksForm">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="label">Sub-Project Remarks</label>
+                            <textarea disabled name="" class="form-control" rows="8"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="label">Files Attached</label>
+                        </div>
+                      </div>
+                    </div>
+                    <input disabled type="file"  name=""> -->
+                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- END OF view SUBPROJECT REMARKS -->
+
   <!-- FIXED PLUGINS -->
   <?php $this->load->view('includes/core_js_files.php')?>
   
@@ -691,6 +729,12 @@ $(document).ready(function(){
   // View sub project
   $('.btnViewSubProject').on('click', function(){
       $('#editsubProjectModal').modal('show');
+    })
+  // End of view project
+
+  // View sub project
+  $('.btnViewSubProjectRemarks').on('click', function(){
+      $('#viewSubProjectRemarksModal').modal('show');
     })
   // End of view project
 

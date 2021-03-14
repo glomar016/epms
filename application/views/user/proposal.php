@@ -68,9 +68,9 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>March 3, 2021</td>
                           <td><span class="badge badge-secondary">Pending</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
+                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -82,9 +82,9 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>Febuary 26, 2021</td>
                           <td><span class="badge badge-info">In Process</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
+                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -96,9 +96,9 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>March 30, 2021</td>
                           <td><span class="badge badge-secondary">Pending</span></td>
                           <td>
-                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i> View</button>
-                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i> Update</button>
-                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i> Delete</button>
+                            <button class="btn btn-sm btn-info btnViewProject"  style="padding:5px"><i class="material-icons">visibility</i></button>
+                            <button class="btn btn-sm btn-warning btnEditProject" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteProject" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -130,7 +130,7 @@ The above copyright notice and this permission notice shall be included in all c
   
   <!-- MODALS -->
   <!-- ADD NEW PROJECT  -->
-<div id="newProjectModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newProjectModalLabel" aria-hidden="true">
+  <div id="newProjectModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newProjectModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#4caf50">
@@ -150,10 +150,15 @@ The above copyright notice and this permission notice shall be included in all c
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-md-12">
+                      <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Implementer</label>
-                          <input id="projectImplementer" name="projectImplementer" type="text" class="form-control">
+                          <select id="projectStatus" class="form-control">
+                                <option selected value=""></option>
+                                <option value="Pending">Test Implementer</option>
+                                <option value="In Process">Test Implementer 2</option>
+                                <option value="Approved">Test Implementer 3</option>
+                            </select>
                         </div>
                       </div>
                       <div class="col-md-12">
@@ -278,7 +283,19 @@ The above copyright notice and this permission notice shall be included in all c
                         </div>
                       </div>
                     </div>
-            </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-group">
+                            <label class="bmd-label-floating">Document</label>
+                            <button data-toggle="modal" data-target="#docuModal" data-dismiss="modal"
+                              type="submit" class="btn btn-primary pull-right"><i class="material-icons">add</i> View Document
+                            </button>  
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <input id="btnUpdateProject" type="submit" value="update" class="btn btn-warning">
@@ -288,6 +305,25 @@ The above copyright notice and this permission notice shall be included in all c
         </div>
       </div>
     <!-- END OF EDIT PROJECT -->
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-lg" id="docuModal" width="2000" height="1000" tabindex="-1" role="dialog" aria-labelledby="docuModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <iframe id="docu" width="2000" height="1000" src="<?php echo base_url()?>resources/files/test.pdf"></iframe>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
 
 </body>
 
