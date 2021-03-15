@@ -35,21 +35,21 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="row">
             <!-- END OF OPENING TAG OF CONTENT -->
 
-            <!-- COLLEGES DATA TABLE -->
+            <!-- BRANCHESS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title pull-left">Implementer</h3>
-                      <button data-toggle="modal" data-target="#newImplementerModal" data-dismiss="modal"
-                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add Implementer
+                      <h3 class="card-title pull-left">Branches</h3>
+                      <button data-toggle="modal" data-target="#newBranchesModal" data-dismiss="modal"
+                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add Branch
                       </button>  
                     </div>
-                    <p class="card-category"> List of Implementer</p>
+                    <p class="card-category"> List of Branches</p>
                   </div>
                 <div class="card-body">
                   <div class="table-responsive-data2">
-                    <table id="COLLEGESTable" class="table table-striped " style="width:100%">
+                    <table id="branchesTable" class="table table-striped " style="width:100%">
                       <thead class=" text-sucess">
                           <th>ID</th>
                           <th>Name</th>
@@ -62,9 +62,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewBranches"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditBranches" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteBranches" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -73,9 +73,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 2
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewBranches"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditBranches" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteBranches" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -84,9 +84,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 3
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewBranches"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
+                            <button class="btn btn-sm btn-warning btnEditBranches" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteBranches" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -95,7 +95,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </div>
-             <!-- END OF COLLEGES DATA TABLE -->
+             <!-- END OF BRANCHESS DATA TABLE -->
 
             <!-- CLOSING TAG OF CONTENT -->
           </div>
@@ -117,67 +117,67 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <!-- ADD NEW PROJECT  -->
-  <div id="newImplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newImplementerModalLabel" aria-hidden="true">
+  <!-- ADD NEW BRANCHES  -->
+  <div id="newBranchesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newBranchesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#4caf50">
-              <p class="card-category" style="color:white">Adding New Implementer</p>
+              <p class="card-category" style="color:white">Adding New Branch</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="newImplementerForm" name="newImplementerForm">
+            <form id="newBranchesForm" name="newBranchesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Implementer Name</label>
-                          <input id="implementerName" name="implementerName" type="text" class="form-control">
+                          <label class="bmd-label-floating">Name of Branch</label>
+                          <input id="branchName" name="branchName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
             </div>     
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnNewImplementerModal" type="submit" value="submit" class="btn btn-success">
+              <input id="btnNewBranchesModal" type="submit" value="submit" class="btn btn-success">
             </div>
             </form>
           </div>
         </div>
       </div>
-    <!-- END OF ADD NEW PROJECT -->
+    <!-- END OF ADD NEW BRANCH -->
 
-    <!-- Edit implementer  -->
-    <div id="editimplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editimplementerModalLabel" aria-hidden="true">
+    <!-- Edit branch  -->
+    <div id="editbranchesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editbranchesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#ff9800">
-              <p class="card-category" style="color:white">Updating Implementer</p>
+              <p class="card-category" style="color:white">Updating Branch</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="editimplementerForm" name="editimplementerForm">
+            <form id="editbranchesForm" name="editbranchesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="label">Implementer</label>
-                          <input id="editimplementerName" name="editimplementerName" type="text" class="form-control">
+                          <label class="label">Name of Branch</label>
+                          <input id="editbranchName" name="editbranchName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
                   </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnUpdateImplementer" type="submit" value="update" class="btn btn-warning">
+              <input id="btnUpdateBranches" type="submit" value="update" class="btn btn-warning">
             </div>
             </form>
           </div>
         </div>
       </div>
-    <!-- END OF EDIT PROJECT -->
+    <!-- END OF EDIT BRANCH -->
 
     <!-- Modal -->
     <div class="modal fade bd-example-modal-lg" id="docuModal" width="2000" height="1000" tabindex="-1" role="dialog" aria-labelledby="docuModalLabel" aria-hidden="true">
@@ -212,7 +212,7 @@ The above copyright notice and this permission notice shall be included in all c
   $(document).ready(function(){    
 
     function loadtable(){
-        COLLEGESTable = $('#COLLEGESTable').DataTable({
+        branchesTable = $('#branchesTable').DataTable({
           
           
           
@@ -229,10 +229,10 @@ The above copyright notice and this permission notice shall be included in all c
     loadtable()
 
 
-    // Creating new implementer
-    $('#newImplementerForm').on('submit', function(e){
+    // Creating new branch
+    $('#newBranchesForm').on('submit', function(e){
         e.preventDefault();
-        $("#btnNewImplementerModal").attr("disabled", true);
+        $("#btnNewBranchesModal").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -243,44 +243,44 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, submit it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnNewImplementerModal").attr("disabled", false);
-            $('#newImplementerModal').modal('hide');
-            showNotify('add_alert', 'You successfully submitted a proposal implementer', 'success', 'top', 'right');
+            $("#btnNewBranchesModal").attr("disabled", false);
+            $('#newBranchesModal').modal('hide');
+            showNotify('add_alert', 'You successfully submitted a proposal branches', 'success', 'top', 'right');
           }
           else{
-            $("#btnNewImplementerModal").attr("disabled", false);
+            $("#btnNewBranchesModal").attr("disabled", false);
           }
-          $("#btnNewImplementerModal").attr("disabled", false);
+          $("#btnNewBranchesModal").attr("disabled", false);
         })
         // End of Confirmation
 
     });
-    // End of Creating new implementer
+    // End of Creating new branch
 
-    // View implementer
-    $('.btnViewImplementer').on('click', function(){
+    // View branches
+    $('.btnViewBranches').on('click', function(){
         window.location.href = '<?php echo base_url()?>'+'user/proposal/view';
 
     });
-    // End of View implementer
+    // End of View branches
     
-    // Edit implementer
-    $('.btnEditImplementer').on('click', function(){
-      $('[name="editimplementerTitle"').val('Test Title');
-      $('[name="editimplementerImplementer"').val('Test Implementer');
-      $('[name="editimplementerTargetGroup"').val('Test Target Group');
-      $('[name="editimplementerCooperatingAgencies"').val('Test Cooperating Agencies');
-      $('[name="editimplementerDateStart"').val('2021-02-06');
-      $('[name="editimplementerDateEnd"').val('2021-03-23');
-      $('[name="editimplementerImpactStatement"').val('Test Impact Statement');
-      $('#editimplementerModal').modal('show');
+    // Edit branch
+    $('.btnEditBranches').on('click', function(){
+      $('[name="editbranchesTitle"').val('Test Title');
+      $('[name="editbranchesImplementer"').val('Test Implementer');
+      $('[name="editbranchesTargetGroup"').val('Test Target Group');
+      $('[name="editbranchesCooperatingAgencies"').val('Test Cooperating Agencies');
+      $('[name="editbranchesDateStart"').val('2021-02-06');
+      $('[name="editbranchesDateEnd"').val('2021-03-23');
+      $('[name="editbranchesImpactStatement"').val('Test Impact Statement');
+      $('#editbranchesModal').modal('show');
     })
-    // End of edit implementer
+    // End of edit branch
 
-    // Update Implementer
-    $('#editimplementerForm').on('submit', function(e){
+    // Update Branch
+    $('#editbranchesForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnUpdateImplementer").attr("disabled", true);
+        $("#btnUpdateBranches").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -291,21 +291,21 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, update it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnUpdateImplementer").attr("disabled", false);
-            $('#editimplementerModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your implementer', 'warning', 'top', 'right');
+            $("#btnUpdateBranches").attr("disabled", false);
+            $('#editbranchesModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update your branches', 'warning', 'top', 'right');
           }
           else{
-            $("#btnUpdateImplementer").attr("disabled", false);
+            $("#btnUpdateBranches").attr("disabled", false);
           }
-          $("#btnUpdateImplementer").attr("disabled", false);
+          $("#btnUpdateBranches").attr("disabled", false);
         })
         // End of Confirmation
     })
-    // End of update implementer
+    // End of update branch
 
-    // Delete implementer
-    $('.btnDeleteImplementer').on('click', function(){
+    // Delete branches
+    $('.btnDeleteBranches').on('click', function(){
       // Confirmation
       Swal.fire({
           title: 'Are you sure?',
@@ -315,12 +315,12 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            showNotify('delete', 'You successfully deleted your implementer', 'danger', 'top', 'right');
+            showNotify('delete', 'You successfully deleted your branches', 'danger', 'top', 'right');
           }
         })
         // End of Confirmation
     })
-    // End of delete implementer
+    // End of delete branch
     
   });
 </script>

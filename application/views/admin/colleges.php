@@ -40,12 +40,12 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="card">
                   <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title pull-left">Implementer</h3>
-                      <button data-toggle="modal" data-target="#newImplementerModal" data-dismiss="modal"
-                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add Implementer
+                      <h3 class="card-title pull-left">Colleges</h3>
+                      <button data-toggle="modal" data-target="#newCollegesModal" data-dismiss="modal"
+                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add College
                       </button>  
                     </div>
-                    <p class="card-category"> List of Implementer</p>
+                    <p class="card-category"> List of Colleges</p>
                   </div>
                 <div class="card-body">
                   <div class="table-responsive-data2">
@@ -62,9 +62,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -73,9 +73,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 2
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -84,9 +84,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 3
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
+                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -118,29 +118,29 @@ The above copyright notice and this permission notice shall be included in all c
   
   <!-- MODALS -->
   <!-- ADD NEW PROJECT  -->
-  <div id="newImplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newImplementerModalLabel" aria-hidden="true">
+  <div id="newCollegesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newCollegesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#4caf50">
-              <p class="card-category" style="color:white">Adding New Implementer</p>
+              <p class="card-category" style="color:white">Adding New College</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="newImplementerForm" name="newImplementerForm">
+            <form id="newCollegesForm" name="newCollegesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Implementer Name</label>
-                          <input id="implementerName" name="implementerName" type="text" class="form-control">
+                          <label class="bmd-label-floating">College Name</label>
+                          <input id="collegeName" name="collegeName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
             </div>     
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnNewImplementerModal" type="submit" value="submit" class="btn btn-success">
+              <input id="btnNewCollegesModal" type="submit" value="submit" class="btn btn-success">
             </div>
             </form>
           </div>
@@ -148,30 +148,30 @@ The above copyright notice and this permission notice shall be included in all c
       </div>
     <!-- END OF ADD NEW PROJECT -->
 
-    <!-- Edit implementer  -->
-    <div id="editimplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editimplementerModalLabel" aria-hidden="true">
+    <!-- Edit colleges  -->
+    <div id="editcollegesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editcollegesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#ff9800">
-              <p class="card-category" style="color:white">Updating Implementer</p>
+              <p class="card-category" style="color:white">Updating College</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="editimplementerForm" name="editimplementerForm">
+            <form id="editcollegesForm" name="editcollegesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="label">Implementer</label>
-                          <input id="editimplementerName" name="editimplementerName" type="text" class="form-control">
+                          <label class="label">College</label>
+                          <input id="editcollegeName" name="editcollegeName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
                   </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnUpdateImplementer" type="submit" value="update" class="btn btn-warning">
+              <input id="btnUpdateColleges" type="submit" value="update" class="btn btn-warning">
             </div>
             </form>
           </div>
@@ -229,10 +229,10 @@ The above copyright notice and this permission notice shall be included in all c
     loadtable()
 
 
-    // Creating new implementer
-    $('#newImplementerForm').on('submit', function(e){
+    // Creating new colleges
+    $('#newCollegesForm').on('submit', function(e){
         e.preventDefault();
-        $("#btnNewImplementerModal").attr("disabled", true);
+        $("#btnNewCollegesModal").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -243,44 +243,44 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, submit it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnNewImplementerModal").attr("disabled", false);
-            $('#newImplementerModal').modal('hide');
-            showNotify('add_alert', 'You successfully submitted a proposal implementer', 'success', 'top', 'right');
+            $("#btnNewCollegesModal").attr("disabled", false);
+            $('#newCollegesModal').modal('hide');
+            showNotify('add_alert', 'You successfully submitted a proposal colleges', 'success', 'top', 'right');
           }
           else{
-            $("#btnNewImplementerModal").attr("disabled", false);
+            $("#btnNewCollegesModal").attr("disabled", false);
           }
-          $("#btnNewImplementerModal").attr("disabled", false);
+          $("#btnNewCollegesModal").attr("disabled", false);
         })
         // End of Confirmation
 
     });
-    // End of Creating new implementer
+    // End of Creating new colleges
 
-    // View implementer
-    $('.btnViewImplementer').on('click', function(){
+    // View colleges
+    $('.btnViewColleges').on('click', function(){
         window.location.href = '<?php echo base_url()?>'+'user/proposal/view';
 
     });
-    // End of View implementer
+    // End of View colleges
     
-    // Edit implementer
-    $('.btnEditImplementer').on('click', function(){
-      $('[name="editimplementerTitle"').val('Test Title');
-      $('[name="editimplementerImplementer"').val('Test Implementer');
-      $('[name="editimplementerTargetGroup"').val('Test Target Group');
-      $('[name="editimplementerCooperatingAgencies"').val('Test Cooperating Agencies');
-      $('[name="editimplementerDateStart"').val('2021-02-06');
-      $('[name="editimplementerDateEnd"').val('2021-03-23');
-      $('[name="editimplementerImpactStatement"').val('Test Impact Statement');
-      $('#editimplementerModal').modal('show');
+    // Edit colleges
+    $('.btnEditColleges').on('click', function(){
+      $('[name="editcollegesTitle"').val('Test Title');
+      $('[name="editcollegesImplementer"').val('Test Implementer');
+      $('[name="editcollegesTargetGroup"').val('Test Target Group');
+      $('[name="editcollegesCooperatingAgencies"').val('Test Cooperating Agencies');
+      $('[name="editcollegesDateStart"').val('2021-02-06');
+      $('[name="editcollegesDateEnd"').val('2021-03-23');
+      $('[name="editcollegesImpactStatement"').val('Test Impact Statement');
+      $('#editcollegesModal').modal('show');
     })
-    // End of edit implementer
+    // End of edit colleges
 
-    // Update Implementer
-    $('#editimplementerForm').on('submit', function(e){
+    // Update Colleges
+    $('#editcollegesForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnUpdateImplementer").attr("disabled", true);
+        $("#btnUpdateColleges").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -291,21 +291,21 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, update it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnUpdateImplementer").attr("disabled", false);
-            $('#editimplementerModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your implementer', 'warning', 'top', 'right');
+            $("#btnUpdateColleges").attr("disabled", false);
+            $('#editcollegesModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update your colleges', 'warning', 'top', 'right');
           }
           else{
-            $("#btnUpdateImplementer").attr("disabled", false);
+            $("#btnUpdateColleges").attr("disabled", false);
           }
-          $("#btnUpdateImplementer").attr("disabled", false);
+          $("#btnUpdateColleges").attr("disabled", false);
         })
         // End of Confirmation
     })
-    // End of update implementer
+    // End of update colleges
 
-    // Delete implementer
-    $('.btnDeleteImplementer').on('click', function(){
+    // Delete colleges
+    $('.btnDeleteColleges').on('click', function(){
       // Confirmation
       Swal.fire({
           title: 'Are you sure?',
@@ -315,12 +315,12 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            showNotify('delete', 'You successfully deleted your implementer', 'danger', 'top', 'right');
+            showNotify('delete', 'You successfully deleted your colleges', 'danger', 'top', 'right');
           }
         })
         // End of Confirmation
     })
-    // End of delete implementer
+    // End of delete colleges
     
   });
 </script>

@@ -35,21 +35,21 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="row">
             <!-- END OF OPENING TAG OF CONTENT -->
 
-            <!-- COLLEGES DATA TABLE -->
+            <!-- CAMPUSESS DATA TABLE -->
             <div class="col-md-12">
               <div class="card">
                   <div class="card-header card-header-primary">
                     <div class="d-flex justify-content-between">
-                      <h3 class="card-title pull-left">Implementer</h3>
-                      <button data-toggle="modal" data-target="#newImplementerModal" data-dismiss="modal"
-                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add Implementer
+                      <h3 class="card-title pull-left">Campuses</h3>
+                      <button data-toggle="modal" data-target="#newCampusesModal" data-dismiss="modal"
+                        type="submit" class="btn btn-success pull-right"><i class="material-icons">add</i> Add Campus
                       </button>  
                     </div>
-                    <p class="card-category"> List of Implementer</p>
+                    <p class="card-category"> List of Campuses</p>
                   </div>
                 <div class="card-body">
                   <div class="table-responsive-data2">
-                    <table id="COLLEGESTable" class="table table-striped " style="width:100%">
+                    <table id="campusessTable" class="table table-striped " style="width:100%">
                       <thead class=" text-sucess">
                           <th>ID</th>
                           <th>Name</th>
@@ -59,12 +59,12 @@ The above copyright notice and this permission notice shall be included in all c
                         <tr>
                           <td>1</td>
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
-                            Test 
+                            Test
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -73,9 +73,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 2
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
@@ -84,9 +84,9 @@ The above copyright notice and this permission notice shall be included in all c
                             Test 3
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
-                            <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteImplementer" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>
@@ -95,7 +95,7 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div>
             </div>
-             <!-- END OF COLLEGES DATA TABLE -->
+             <!-- END OF CAMPUSESS DATA TABLE -->
 
             <!-- CLOSING TAG OF CONTENT -->
           </div>
@@ -117,67 +117,67 @@ The above copyright notice and this permission notice shall be included in all c
   <?php $this->load->view('includes/core_js_files.php')?>
   
   <!-- MODALS -->
-  <!-- ADD NEW PROJECT  -->
-  <div id="newImplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newImplementerModalLabel" aria-hidden="true">
+  <!-- ADD NEW CAMPUSES  -->
+  <div id="newCampusesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="newCampusesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#4caf50">
-              <p class="card-category" style="color:white">Adding New Implementer</p>
+              <p class="card-category" style="color:white">Adding New Campus</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="newImplementerForm" name="newImplementerForm">
+            <form id="newCampusesForm" name="newCampusesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Implementer Name</label>
-                          <input id="implementerName" name="implementerName" type="text" class="form-control">
+                          <label class="bmd-label-floating">Name of Campus</label>
+                          <input id="campusName" name="campusName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
             </div>     
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnNewImplementerModal" type="submit" value="submit" class="btn btn-success">
+              <input id="btnNewCampusesModal" type="submit" value="submit" class="btn btn-success">
             </div>
             </form>
           </div>
         </div>
       </div>
-    <!-- END OF ADD NEW PROJECT -->
+    <!-- END OF ADD NEW CAMPUSES -->
 
-    <!-- Edit implementer  -->
-    <div id="editimplementerModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editimplementerModalLabel" aria-hidden="true">
+    <!-- Edit campuses  -->
+    <div id="editcampusesModal" class="modal fade bd-example-modal-lg"tabindex="-1" role="dialog" aria-labelledby="editcampusesModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header" style="background-color:#ff9800">
-              <p class="card-category" style="color:white">Updating Implementer</p>
+              <p class="card-category" style="color:white">Updating Campus</p>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-            <form id="editimplementerForm" name="editimplementerForm">
+            <form id="editcampusesForm" name="editcampusesForm">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
-                          <label class="label">Implementer</label>
-                          <input id="editimplementerName" name="editimplementerName" type="text" class="form-control">
+                          <label class="label">Name of Campus</label>
+                          <input id="editcampusName" name="editcampusName" type="text" class="form-control">
                         </div>
                       </div>
                     </div>
                   </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input id="btnUpdateImplementer" type="submit" value="update" class="btn btn-warning">
+              <input id="btnUpdateCampuses" type="submit" value="update" class="btn btn-warning">
             </div>
             </form>
           </div>
         </div>
       </div>
-    <!-- END OF EDIT PROJECT -->
+    <!-- END OF EDIT CAMPUSES -->
 
     <!-- Modal -->
     <div class="modal fade bd-example-modal-lg" id="docuModal" width="2000" height="1000" tabindex="-1" role="dialog" aria-labelledby="docuModalLabel" aria-hidden="true">
@@ -212,7 +212,7 @@ The above copyright notice and this permission notice shall be included in all c
   $(document).ready(function(){    
 
     function loadtable(){
-        COLLEGESTable = $('#COLLEGESTable').DataTable({
+        campusessTable = $('#campusessTable').DataTable({
           
           
           
@@ -229,10 +229,10 @@ The above copyright notice and this permission notice shall be included in all c
     loadtable()
 
 
-    // Creating new implementer
-    $('#newImplementerForm').on('submit', function(e){
+    // Creating new campuses
+    $('#newCampusesForm').on('submit', function(e){
         e.preventDefault();
-        $("#btnNewImplementerModal").attr("disabled", true);
+        $("#btnNewCampusesModal").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -243,44 +243,44 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, submit it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnNewImplementerModal").attr("disabled", false);
-            $('#newImplementerModal').modal('hide');
-            showNotify('add_alert', 'You successfully submitted a proposal implementer', 'success', 'top', 'right');
+            $("#btnNewCampusesModal").attr("disabled", false);
+            $('#newCampusesModal').modal('hide');
+            showNotify('add_alert', 'You successfully submitted a proposal campuses', 'success', 'top', 'right');
           }
           else{
-            $("#btnNewImplementerModal").attr("disabled", false);
+            $("#btnNewCampusesModal").attr("disabled", false);
           }
-          $("#btnNewImplementerModal").attr("disabled", false);
+          $("#btnNewCampusesModal").attr("disabled", false);
         })
         // End of Confirmation
 
     });
-    // End of Creating new implementer
+    // End of Creating new campuses
 
-    // View implementer
-    $('.btnViewImplementer').on('click', function(){
+    // View campuses
+    $('.btnViewCampuses').on('click', function(){
         window.location.href = '<?php echo base_url()?>'+'user/proposal/view';
 
     });
-    // End of View implementer
+    // End of View campuses
     
-    // Edit implementer
-    $('.btnEditImplementer').on('click', function(){
-      $('[name="editimplementerTitle"').val('Test Title');
-      $('[name="editimplementerImplementer"').val('Test Implementer');
-      $('[name="editimplementerTargetGroup"').val('Test Target Group');
-      $('[name="editimplementerCooperatingAgencies"').val('Test Cooperating Agencies');
-      $('[name="editimplementerDateStart"').val('2021-02-06');
-      $('[name="editimplementerDateEnd"').val('2021-03-23');
-      $('[name="editimplementerImpactStatement"').val('Test Impact Statement');
-      $('#editimplementerModal').modal('show');
+    // Edit campuses
+    $('.btnEditCampuses').on('click', function(){
+      $('[name="editcampusesTitle"').val('Test Title');
+      $('[name="editcampusesImplementer"').val('Test Implementer');
+      $('[name="editcampusesTargetGroup"').val('Test Target Group');
+      $('[name="editcampusesCooperatingAgencies"').val('Test Cooperating Agencies');
+      $('[name="editcampusesDateStart"').val('2021-02-06');
+      $('[name="editcampusesDateEnd"').val('2021-03-23');
+      $('[name="editcampusesImpactStatement"').val('Test Impact Statement');
+      $('#editcampusesModal').modal('show');
     })
-    // End of edit implementer
+    // End of edit campuses
 
-    // Update Implementer
-    $('#editimplementerForm').on('submit', function(e){
+    // Update Campuses
+    $('#editcampusesForm').on('submit', function(e){
       e.preventDefault();
-        $("#btnUpdateImplementer").attr("disabled", true);
+        $("#btnUpdateCampuses").attr("disabled", true);
 
         // Confirmation
         Swal.fire({
@@ -291,21 +291,21 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, update it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            $("#btnUpdateImplementer").attr("disabled", false);
-            $('#editimplementerModal').modal('hide');
-            showNotify('system_update_alt', 'You successfully update your implementer', 'warning', 'top', 'right');
+            $("#btnUpdateCampuses").attr("disabled", false);
+            $('#editcampusesModal').modal('hide');
+            showNotify('system_update_alt', 'You successfully update your campuses', 'warning', 'top', 'right');
           }
           else{
-            $("#btnUpdateImplementer").attr("disabled", false);
+            $("#btnUpdateCampuses").attr("disabled", false);
           }
-          $("#btnUpdateImplementer").attr("disabled", false);
+          $("#btnUpdateCampuses").attr("disabled", false);
         })
         // End of Confirmation
     })
-    // End of update implementer
+    // End of update campuses
 
-    // Delete implementer
-    $('.btnDeleteImplementer').on('click', function(){
+    // Delete campuses
+    $('.btnDeleteCampuses').on('click', function(){
       // Confirmation
       Swal.fire({
           title: 'Are you sure?',
@@ -315,12 +315,12 @@ The above copyright notice and this permission notice shall be included in all c
           confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
           if (result.isConfirmed) {
-            showNotify('delete', 'You successfully deleted your implementer', 'danger', 'top', 'right');
+            showNotify('delete', 'You successfully deleted your campuses', 'danger', 'top', 'right');
           }
         })
         // End of Confirmation
     })
-    // End of delete implementer
+    // End of delete campuses
     
   });
 </script>
