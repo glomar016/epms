@@ -184,7 +184,7 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <iframe id="docu" width="2000" height="1000" src="<?php echo base_url()?>resources/files/test.pdf"></iframe>
+            
           </div>
           <div class="modal-body">
             ...
