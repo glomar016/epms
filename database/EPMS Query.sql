@@ -1,0 +1,110 @@
+
+CREATE TABLE t_user(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+userName VARCHAR(500) NULL,
+userPassword VARCHAR(500) NULL,
+userEmail VARCHAR(500) NULL,
+userType INT(11) DEFAULT 1,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1
+);
+
+CREATE TABLE r_campuses(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+campusName VARCHAR(500) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1
+);
+
+CREATE TABLE r_branches(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+branchName VARCHAR(500) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1
+);
+
+CREATE TABLE r_college(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+collegeName VARCHAR(500) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1
+);
+
+
+CREATE TABLE r_faculty_experts(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+campusId INT(11) NULL,
+branchId INT(11) NULL,
+collegeId INT(11) NULL,
+userId INT(11) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(campusId) REFERENCES r_campuses(id),
+CONSTRAINT FOREIGN KEY(branchId) REFERENCES r_branches(id),
+CONSTRAINT FOREIGN KEY(collegeId) REFERENCES r_college(id),
+CONSTRAINT FOREIGN KEY(userId) REFERENCES t_user(id)
+);
+
+
+CREATE TABLE t_project(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+facultyExpertId INT(11) NULL,
+projectTitle VARCHAR(500) NULL,
+projectTargetGroup VARCHAR(500) NULL,
+projectCooperatingAgencies VARCHAR(500) NULL,
+projectDateStart DATETIME NULL,
+projecDateEnd DATETIME NULL, 
+projectImpactStatement VARCHAR(1000) NULL,
+projectEvaluation VARCHAR(1000) NULL,
+projectStatus VARCHAR(255) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(facultyExpertId) REFERENCES r_faculty_experts(id)
+);
+
+
+CREATE TABLE t_project_details(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+projectId INT(11) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(projectId) REFERENCES t_project(id)
+);
+
+CREATE TABLE t_financial_requirement(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+projectDetailsId INT(11) NULL,
+feBudgetItem VARCHAR(500) NULL,
+feParticular VARCHAR(500) NULL,
+feQuantity VARCHAR(500) NULL,
+feEstimatedCost VARCHAR(500) NULL,
+feTotal VARCHAR(500) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(projectDetailsId) REFERENCES t_project_details(id)
+);
+
+CREATE TABLE t_evaluation_plan(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+projectDetailsId INT(11) NULL,
+epOutcome VARCHAR(1000) NULL,
+epIndicator VARCHAR(1000) NULL,
+epDataCollectionMethod VARCHAR(1000) NULL,
+epFrequency VARCHAR(1000) NULL,
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(projectDetailsId) REFERENCES t_project_details(id)
+);
+
+CREATE TABLE t_sub_project(
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+projectId INT(11) NULL,
+subProjectTitle VARCHAR(500),
+subProjectDueDate DATETIME NULL,
+subProjectDetails VARCHAR(1000),
+subProjectRemarks VARCHAR(1000),
+subProjectEvaluation VARCHAR(1000),
+dateCreated DATETIME DEFAULT CURRENT_TIMESTAMP,
+columnStatus INT(11) DEFAULT 1,
+CONSTRAINT FOREIGN KEY(projectId) REFERENCES t_project(id)
+); 

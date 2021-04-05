@@ -51,42 +51,35 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="table-responsive-data2">
                     <table id="COLLEGESTable" class="table table-striped " style="width:100%">
                       <thead class=" text-sucess">
-                          <th>ID</th>
                           <th>Name</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>1</td>
-                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
-                            Test 
+                            <td>Test</td>
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td>2</td>
-                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
-                            Test 2
+                          <td>Test 2</td>
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
-                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                         <tr>
-                          <td>3</td>
-                          <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
-                            Test 3
+                          <td>Test 3</td>
                           </td>
                           <td>
-                            <!-- <button class="btn btn-sm btn-info btnViewColleges"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
-                            <button class="btn btn-sm btn-warning btnEditColleges" style="padding:5px"><i class="material-icons">edit</i></button>
-                            <button class="btn btn-sm btn-danger btnDeleteColleges" style="padding:5px"><i class="material-icons">delete</i></button>
+                            <!-- <button class="btn btn-sm btn-info btnViewCampuses"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
+                            <button class="btn btn-sm btn-warning btnEditCampuses" style="padding:5px"><i class="material-icons">edit</i></button>
+                            <button class="btn btn-sm btn-danger btnDeleteCampuses" style="padding:5px"><i class="material-icons">delete</i></button>
                           </td>
                         </tr>
                       </tbody>

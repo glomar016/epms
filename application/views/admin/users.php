@@ -53,6 +53,7 @@ The above copyright notice and this permission notice shall be included in all c
                       <thead class=" text-sucess">
                           <th>ID</th>
                           <th>Name</th>
+                          <th>Type</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
@@ -61,6 +62,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 
                           </td>
+                          <td>Admin</td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewUser"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
                             <button class="btn btn-sm btn-warning btnEditUser" style="padding:5px"><i class="material-icons">edit</i></button>
@@ -72,6 +74,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 2
                           </td>
+                          <td>Chief</td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewUser"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
                             <button class="btn btn-sm btn-warning btnEditUser" style="padding:5px"><i class="material-icons">edit</i></button>
@@ -83,6 +86,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 3
                           </td>
+                          <td>Faculty</td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewUser"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
                             <button class="btn btn-sm btn-warning btnEditUser" style="padding:5px"><i class="material-icons">edit</i></button>
@@ -129,14 +133,35 @@ The above copyright notice and this permission notice shall be included in all c
             </div>
             <div class="modal-body">
             <form id="newUserForm" name="newUserForm">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Name</label>
-                          <input id="userName" name="userName" type="text" class="form-control">
-                        </div>
-                      </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Name</label>
+                      <input id="userName" name="userName" type="text" class="form-control">
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Email</label>
+                      <input id="userEmail" name="userEmail" type="email" class="form-control">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                    <label class="bmd-label-floating">Type</label>
+                      <select id="selectedOrigin" class="form-control">
+                        <option selected disabled>Select</option>
+                        <option>Faculty</option>
+                        <option>Chief</option>
+                        <option>Admin</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
             </div>     
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

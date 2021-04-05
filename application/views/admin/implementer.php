@@ -53,6 +53,8 @@ The above copyright notice and this permission notice shall be included in all c
                       <thead class=" text-sucess">
                           <th>ID</th>
                           <th>Name</th>
+                          <th>Type</th>
+                          <th>Representing</th>
                           <th>Action</th>
                       </thead>
                       <tbody>
@@ -60,6 +62,12 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>1</td>
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 
+                          </td>
+                          <td> 
+                            Branches
+                          </td>
+                          <td> 
+                            PUP Quezon City
                           </td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
@@ -72,6 +80,12 @@ The above copyright notice and this permission notice shall be included in all c
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 2
                           </td>
+                          <td> 
+                            Colleges
+                          </td>
+                          <td> 
+                            College of Engineering
+                          </td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button> -->
                             <button class="btn btn-sm btn-warning btnEditImplementer" style="padding:5px"><i class="material-icons">edit</i></button>
@@ -82,6 +96,12 @@ The above copyright notice and this permission notice shall be included in all c
                           <td>3</td>
                           <td> <img src="<?php echo base_url('resources/images/avatar_0120.jpg'); ?>" width="30" height="30" style="border-radius: 50%;" />
                             Test 3
+                          </td>
+                          <td> 
+                            Branches
+                          </td>
+                          <td> 
+                            PUP San Juan
                           </td>
                           <td>
                             <!-- <button class="btn btn-sm btn-info btnViewImplementer"  style="padding:5px"><i class="material-icons">visibility</i></button>-->
@@ -129,14 +149,35 @@ The above copyright notice and this permission notice shall be included in all c
             </div>
             <div class="modal-body">
             <form id="newImplementerForm" name="newImplementerForm">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Implementer Name</label>
-                          <input id="implementerName" name="implementerName" type="text" class="form-control">
-                        </div>
-                      </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Implementer</label>
+                      <select class="form-control">
+                        <option selected disabled>Select</option>
+                        <option value="Colleges">User 1</option>
+                        <option value="Branches">User 2</option>
+                        <option value="Campuses">User 3</option>
+                      </select>
                     </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Representing</label>
+                      <select id="selectedOrigin" class="form-control">
+                        <option selected disabled>Select</option>
+                        <option value="Colleges">Colleges</option>
+                        <option value="Branches">Branches</option>
+                        <option value="Campuses">Campuses</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div id="divOrigin" class="row">
+                  
+                </div>
             </div>     
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -321,6 +362,54 @@ The above copyright notice and this permission notice shall be included in all c
         // End of Confirmation
     })
     // End of delete implementer
+
+    // selectedOrigin
+    $('#selectedOrigin').on('change', function(){
+      var div = $('#divOrigin');
+      var selected = $('#selectedOrigin').val()
+      if(selected == 'Colleges'){
+        div.html(`<div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">List of Colleges</label>
+                      <select id="selectedOrigin" class="form-control">
+                        <option selected disabled>Select</option>
+                        <option>Test Colleges 1</option>
+                        <option>Test Colleges 2</option>
+                        <option>Test Colleges 3</option>
+                      </select>
+                    </div>
+                  </div>`)
+      }
+      if(selected == 'Branches'){
+        div.html(`<div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">List of Branches</label>
+                      <select id="selectedOrigin" class="form-control">
+                        <option selected disabled>Select</option>
+                        <option>Test Branches 1</option>
+                        <option>Test Branches 2</option>
+                        <option>Test Branches 3</option>
+                      </select>
+                    </div>
+                  </div>`)
+      }
+      if(selected == 'Campuses'){
+        div.html(`<div class="col-md-12">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">List of Campuses</label>
+                      <select id="selectedOrigin" class="form-control">
+                        <option selected disabled>Select</option>
+                        <option>Test Campuses 1</option>
+                        <option>Test Campuses 2</option>
+                        <option>Test Campuses 3</option>
+                      </select>
+                    </div>
+                  </div>`)
+      }
+      
+    })
+
+    // 
     
   });
 </script>

@@ -158,7 +158,7 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                     </div>                
-                    <div class="collapse multi-collapse" id="lineItemBudget">
+                    <div class="collapse multi-collapse text-center" id="lineItemBudget">
                         <!-- TABLE -->
                         <div class="row">
                             <div class="col-md-3">
@@ -167,169 +167,45 @@ The above copyright notice and this permission notice shall be included in all c
                             <div class="col-md-3">
                                 <label class="label">Particulars/Item</label>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-1">
+                                <label class="label">Quantity</label>
+                            </div>
+                            <div class="col-md-2">
                                 <label class="label">Estimated Cost</label>
                             </div>
                             <div class="col-md-3">
                                 <label class="label">Total</label>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <div class="col-md-3">
-                                <label class="label">Operating Cost</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Supplies</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Communication</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Documentation</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Etc</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Travel Costs and Food Expense (if any)</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Fare</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Food Expense</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Etc</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">Others</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3">
-                                <label class="label">TOTAL BUDGET</label>
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="col-md-3">
-                                <input type="text" class="form-control">
+                              <select id="selectBudgetItem" class="form-control">
+                                  <option class="pull-center" selected disabled value="Default">Select Type of Budget Item</option>
+                                  <option value="Operating Cost">Operating Cost</option>
+                                  <option value="Supplies">Supplies</option>
+                                  <option value="Communication">Communication</option>
+                                  <option value="Documentation">Documentation</option>
+                                  <option value="Travel Costs and Food Expense (if any)">Travel Costs and Food Expense (if any)</option>
+                                  <option value="Fare">Fare</option>
+                                  <option value="Food Expense">Food Expense</option>
+                                  <option value="Etc">Etc</option>
+                                  <option value="Others">Others</option>
+                              </select>
                             </div>
                         </div>
                         <!-- END OF TABLE -->
                     </div>
+                    <div class="row">
+                            <div class="col-md-3">
+                                <label class="label">TOTAL BUDGET</label>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="label"></label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
                 <!-- END OF FILL LINE ITEM BUDGET -->
                 <div class="row">
                         <div class="col-md-4">
@@ -346,7 +222,7 @@ The above copyright notice and this permission notice shall be included in all c
                             </div>
                         </div>
                     </div>                
-                    <div class="collapse multi-collapse" id="evaluationPlan">
+                    <div class="collapse multi-collapse text-center" id="evaluationPlan">
                         <!-- TABLE -->
                         <div class="row">
                             <div class="col-md-3">
@@ -782,6 +658,34 @@ $(document).ready(function(){
         // End of Confirmation
     })
     // End of sub-delete project
+
+    // Add Budget Item
+    $('#selectBudgetItem').on('change', function(){
+      var div = $('#lineItemBudget');
+      var ctr = 0;
+      var budgetItem = $('#selectBudgetItem').val()
+      $('#selectBudgetItem').val("Default")
+
+
+      div.append(`<div class="row">
+                            <div class="col-md-3">
+                                <label class="label">${budgetItem}</label>
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-1">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>`);
+    })
+    // End of add budget item
 
 });
 </script>
